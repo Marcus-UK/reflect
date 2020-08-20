@@ -1,0 +1,17 @@
+<h1>Listing Articles</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+ 
+  <% @reflections.each do |reflection| %>
+    <tr>
+      <td><%= reflection.title %></td>
+      <td><%= reflection.text %></td>
+      <td><%= link_to 'Show', reflection_path(reflection) %></td>
+    </tr>
+  <% end %>
+</table>
