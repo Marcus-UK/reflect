@@ -5,7 +5,7 @@
   <tr>
     <th>Title</th>
     <th>Text</th>
-    <th></th>
+    <th colspan="2"></th>
   </tr>
  
   <% @reflections.each do |reflection| %>
@@ -13,6 +13,7 @@
       <td><%= reflection.title %></td>
       <td><%= reflection.text %></td>
       <td><%= link_to 'Show', reflection_path(reflection) %></td>
+      <td><%= link_to 'Edit', edit_reflection_path(reflection) %></td>
     </tr>
   <% end %>
 </table>
