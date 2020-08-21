@@ -8,5 +8,11 @@
   <%= @reflection.text %>
 </p>
 
+<h2>Comments</h2>
+<%= render @reflection.thoughts %>
+
+<h2>Add a thought:</h2>
+<%= render 'thoughts/form' %>
+
 <%= link_to 'Edit', edit_reflection_path(@reflection) %> |
 <%= link_to 'Reflections list', reflections_path %>
