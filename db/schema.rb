@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_19_191145) do
+ActiveRecord::Schema.define(version: 2020_08_21_104050) do
 
   create_table "reflections", force: :cascade do |t|
     t.string "title"
@@ -19,4 +19,14 @@ ActiveRecord::Schema.define(version: 2020_08_19_191145) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "thoughts", force: :cascade do |t|
+    t.string "commenter"
+    t.text "body"
+    t.integer "reflection_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["reflection_id"], name: "index_thoughts_on_reflection_id"
+  end
+
+  add_foreign_key "thoughts", "reflections"
 end
