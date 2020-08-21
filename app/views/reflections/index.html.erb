@@ -5,7 +5,7 @@
   <tr>
     <th>Title</th>
     <th>Text</th>
-    <th colspan="2"></th>
+    <th colspan="3"></th>
   </tr>
  
   <% @reflections.each do |reflection| %>
@@ -14,6 +14,9 @@
       <td><%= reflection.text %></td>
       <td><%= link_to 'Show', reflection_path(reflection) %></td>
       <td><%= link_to 'Edit', edit_reflection_path(reflection) %></td>
+      <td><%= link_to 'Delete', reflection_path(reflection),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>

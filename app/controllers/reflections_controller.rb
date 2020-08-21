@@ -35,6 +35,13 @@ class ReflectionsController < ApplicationController
         end
     end
 
+    def destroy
+        @reflection = Reflection.find(params[:id])
+        @reflection.destroy
+
+        redirect_to reflections_path
+    end
+
     private
 
     def reflection_params
