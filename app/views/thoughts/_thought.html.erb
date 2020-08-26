@@ -7,3 +7,9 @@
   <strong>Thought:</strong>
   <%= thought.body %>
 </p>
+
+<p>
+  <%= link_to 'Delete Thought', [thought.reflection, thought],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
