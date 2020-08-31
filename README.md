@@ -1,24 +1,29 @@
-# README
+# Reflect App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Reflect is a simple web application for recording and tracking your thoughts and self-reflections.
 
-Things you may want to cover:
+# Tech used
 
-* Ruby version
+- Ruby on Rails
 
-* System dependencies
 
-* Configuration
+# Getting Started
 
-* Database creation
+If you'd like to try this project locally, your system needs to satisfy the following prerequisites:
 
-* Database initialization
+```
+ - Ruby 2.6 needs to be installed along with the Rails gem.
+ - The Bundler gem needs to be installed.
+ - Sqlite3 needs to be installed.
+ - Both Node and Yarn need to be installed.
+```
 
-* How to run the test suite
+In order to run this application, follow these steps:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+- Clone this directory
+- Run 'Bundle install' to install the project dependencies.
+- Run 'rails db:migrate' from your command line to create your local database.
+- Run 'Rails server'
+- Visit 'localhost:3000' in a web browser to view the project.
+```
